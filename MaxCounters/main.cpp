@@ -1,3 +1,4 @@
+// 100% Correctness + 60% Performance = 77% Task Score
 vector<int> solution(int N, vector<int> &A) 
 {
     int M = A.size();
@@ -8,9 +9,9 @@ vector<int> solution(int N, vector<int> &A)
     
     for ( int i = 0; i < M; i++ )
     {
-        if ( A[i] == N + 1 )
+        if ( A[i] > N )
         {
-            B.assign(N, max);
+            B.assign(N, max); // time complexity here is linear, need better solution
         }
         else
         {
